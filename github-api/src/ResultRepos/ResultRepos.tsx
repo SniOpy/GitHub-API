@@ -1,4 +1,3 @@
-
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
@@ -12,6 +11,8 @@ import Typography from "@mui/material/Typography";
 import "./ResultRepos.scss";
 import { Link } from "@mui/material";
 import Repo from '../@types/index';
+
+
 interface ReposProps {
   repos: Repo[];
 }

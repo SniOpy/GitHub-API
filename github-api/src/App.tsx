@@ -6,7 +6,6 @@ import ResultRepos from '../src/ResultRepos/ResultRepos';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import axios from 'axios';
-import repos from '../data/repos';
 
 import './App.scss';
 
@@ -28,9 +27,9 @@ function App() {
   }
 // 1. Useffect se lance à chaque modification (rafraichissement)
 // 2. En précisant dans les dépendances un [], le hook se charge de l'afficher au 1er rendu
+// 3. En précisant le state resultSearch , l'appel de l'API se fera uniquempent au changement du state 'resultSearch'
 useEffect(() => {
   fetchRepos();
-  console.log("ResultSearch");
   
 }, [resultSearch]);
 
