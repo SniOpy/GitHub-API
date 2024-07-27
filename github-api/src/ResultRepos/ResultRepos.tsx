@@ -18,6 +18,8 @@ interface ReposProps {
 }
 
 export default function ResultRepos({ repos } : ReposProps) {
+  console.log(repos);
+  
   return (
     <div className="resultRepos">
       <Box sx={{ flexGrow: 1 }}>
@@ -43,7 +45,7 @@ export default function ResultRepos({ repos } : ReposProps) {
                       </Typography>
                     </CardContent>
                     <CardActions>
-                      <Button size="small" component={Link} color="primary" variant="contained" >
+                      <Button size="small" component={Link} href={repo.html_url} color="primary" variant="contained" >
                        Voir sur Github
                       </Button>
                     </CardActions>
