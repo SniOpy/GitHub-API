@@ -12,7 +12,6 @@ import './App.scss';
 
 function App() {
 
-  console.log(repos);
   
   return (
     <React.Fragment>
@@ -22,7 +21,7 @@ function App() {
           <Header/>
           <SearchBar/>
           <Message/>
-          <ResultRepos/>
+          <ResultRepos repos={repos.items}/>
         </div>
       </Container>
     </React.Fragment>
