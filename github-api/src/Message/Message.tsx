@@ -8,7 +8,7 @@ interface MessageProps {
 export default function Message( {total} : MessageProps) {
   return (
     <div className='message'>
-        Votre recherche retourne {total} résultats
+        Votre recherche retourne {total} résultat(s)
     </div>
   )
 }

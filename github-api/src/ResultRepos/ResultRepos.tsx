@@ -24,7 +24,7 @@ export default function ResultRepos({ repos } : ReposProps) {
           <Grid container spacing={3} columns={12}>
           {repos.map((repo) => {
                 return (
-            <Grid item xs={4}>
+            <Grid item xs={4} key={repo.id}>
               
                   <Card sx={{ maxWidth: 345 }}>
                     <CardMedia
