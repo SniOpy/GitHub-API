@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../src/Header/Header';
 import SearchBar from '../src/SearchBar/SearchBar';
 import Message from '../src/Message/Message';
@@ -12,15 +12,23 @@ import './App.scss';
 
 function App() {
 
+  const [resultSearch, setResultSearch] = useState('');
+
   
+  
+  const onSubmit = (value: string) => {
+    setResultSearch(value);
+    console.log(resultSearch);
+    
+  }
   return (
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="lg">
         <div className="App">
           <Header/>
-          <SearchBar/>
-          <Message/>
+          <SearchBar onSubmit={onSubmit}/>
+          <Message total={repos.total_count}/>
           <ResultRepos repos={repos.items}/>
         </div>
       </Container>

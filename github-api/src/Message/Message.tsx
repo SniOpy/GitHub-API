@@ -1,10 +1,14 @@
 import React from 'react';
 
 import './Message.scss';
-export default function Message() {
+
+interface MessageProps {
+  total: number;
+}
+export default function Message( {total} : MessageProps) {
   return (
     <div className='message'>
-        Votre recherche retourne XXXXX résultats
+        Votre recherche retourne {total} résultats
     </div>
   )
 }
